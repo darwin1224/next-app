@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "antd": "^3.25.2",
     "next": "9.1.4",
     "react": "16.12.0",
     "react-dom": "16.12.0"
@@ -17,11 +19,13 @@
     "@types/react": "^16.9.13",
     "@typescript-eslint/eslint-plugin": "^2.8.0",
     "@typescript-eslint/parser": "^2.8.0",
+    "babel-plugin-import": "^1.12.2",
     "eslint": "^6.7.0",
     "eslint-config-prettier": "^6.7.0",
     "eslint-config-react": "^1.1.7",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
+    "null-loader": "^3.0.0",
     "prettier": "^1.19.1",
     "typescript": "^3.7.2"
   }
