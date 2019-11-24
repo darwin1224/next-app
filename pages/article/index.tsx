@@ -9,6 +9,9 @@ export default class ArticleListPage extends Component<{}, ArticleListState> {
    */
   public constructor(props: Readonly<{}>) {
     super(props);
+    this.state = {
+      data: [],
+    };
   }
 
   /**

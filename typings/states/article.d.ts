@@ -1,3 +1,10 @@
 interface ArticleListState {
-  title: string
+  data: ArticleModel[];
+}
+
+interface ArticleModel {
+  id: number;
+  userId: number;
+  title: string;
+  body: string;
 }
