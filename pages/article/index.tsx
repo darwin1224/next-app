@@ -1,4 +1,5 @@
 import React, { Component, ReactNode } from 'react';
+import BaseLayout from '../../components/BaseLayout';
 
 export default class ArticleListPage extends Component<{}, ArticleListState> {
   /**
@@ -20,6 +21,10 @@ export default class ArticleListPage extends Component<{}, ArticleListState> {
    * @returns {ReactNode}
    */
   public render(): ReactNode {
-    return <h1>Hello World</h1>;
+    return (
+      <>
+        <BaseLayout></BaseLayout>
+      </>
+    );
   }
 }
