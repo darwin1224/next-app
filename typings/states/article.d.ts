@@ -1,0 +1,3 @@
+interface ArticleListState {
+  title: string
+}
