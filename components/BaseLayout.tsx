@@ -27,7 +27,17 @@ export default class BaseLayout extends Component<{}, {}> {
           </Sider>
           <Layout>
             <Header style={{ background: '#fff', padding: 0 }}>
-              <Icon className="trigger" type="menu-unfold" onClick={(): void => {}} />
+              <Icon
+                type="menu-unfold"
+                onClick={(): void => {}}
+                style={{
+                  fontSize: '18px',
+                  lineHeight: '64px',
+                  paddingLeft: '24px',
+                  paddingRight: '24px',
+                  cursor: 'pointer',
+                }}
+              />
             </Header>
             <Content
               style={{
