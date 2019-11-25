@@ -1,5 +1,7 @@
 interface ArticleListState {
   data: ArticleModel[];
+  isLoading: boolean;
+  columns: Record<string, any>[];
 }
 
 interface ArticleModel {
