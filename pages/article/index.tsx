@@ -1,5 +1,6 @@
 import { Button, Table } from 'antd';
 import Axios from 'axios';
+import Link from 'next/link';
 import React, { Component, ReactNode } from 'react';
 import BaseLayout from '../../components/BaseLayout';
 
@@ -40,9 +41,7 @@ export default class ArticleListPage extends Component<{}, ArticleListState> {
    */
   private async getAll(): Promise<void> {
     this.setState({ isLoading: true });
-    const { data } = await Axios.get<ArticleModel[]>(
-      'https://jsonplaceholder.typicode.com/posts?_limit=5',
-    );
+    const { data } = await Axios.get<ArticleModel[]>('https://jsonplaceholder.typicode.com/posts');
     this.setState({ data, isLoading: false });
   }
 
@@ -56,9 +55,16 @@ export default class ArticleListPage extends Component<{}, ArticleListState> {
       <>
         <BaseLayout>
           <Button type="primary" style={{ marginBottom: '20px' }}>
-            Add Article
+            <Link href="/article/create">
+              <a>Add Article</a>
+            </Link>
           </Button>
-          <Table rowKey="id" columns={this.state.columns} dataSource={this.state.data}></Table>
+          <Table
+            rowKey="id"
+            loading={this.state.isLoading}
+            columns={this.state.columns}
+            dataSource={this.state.data}
+          ></Table>
         </BaseLayout>
       </>
     );
