@@ -1,6 +1,11 @@
 import React, { Component, ReactNode } from 'react';
 
 export default class ErrorPage extends Component {
+  /**
+   * Render function
+   * 
+   * @returns {ReactNode}
+   */
   public render(): ReactNode {
     return (
       <>
