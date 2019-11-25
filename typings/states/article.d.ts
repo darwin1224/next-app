@@ -1,10 +1,18 @@
+import { ColumnProps } from 'antd/lib/table';
+
 interface ArticleListState {
   data: ArticleModel[];
   isLoading: boolean;
-  columns: Record<string, any>[];
+  columns: ColumnProps[];
 }
 
 interface ArticleCreateState {
+  title: string;
+  body: string;
+  isLoading: boolean;
+}
+
+interface ArticleEditState {
   title: string;
   body: string;
   isLoading: boolean;
